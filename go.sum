@@ -1,0 +1,6 @@
+github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
+github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
+lesiw.io/ctrctl v0.13.0 h1:yDI8b23yZQsjjIFSdkH1gstUvdkKeW05gjm0Rctmnt0=
+lesiw.io/ctrctl v0.13.0/go.mod h1:qhIy8Yy6hV37ee8ASHtAuLL4YeIaWMtcQnA2jV+FFlQ=
+lesiw.io/defers v0.9.0 h1:Sg7RYbhxfHhXMHclO65MJ4oRbyhfSBSeHQw4YjLr6n0=
+lesiw.io/defers v0.9.0/go.mod h1:AP09yGFHxL5vmTVJxkPL33N1hWI4OzHwTEOzilbDZU4=

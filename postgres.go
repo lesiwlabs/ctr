@@ -3,6 +3,7 @@ package ctr
 import (
 	"fmt"
 	"os"
+	"time"
 
 	"lesiw.io/ctrctl"
 	"lesiw.io/defers"
@@ -36,5 +37,13 @@ func Postgres() error {
 	os.Setenv("PGUSER", "postgres")
 	os.Setenv("PGDATABASE", "postgres")
 	os.Setenv("PGPASSWORD", "postgres")
+	for {
+		_, err := ctrctl.ContainerExec(nil, id,
+			"psql", "-U", "postgres", "-c", "SELECT VERSION();")
+		if err == nil {
+			break
+		}
+		time.Sleep(100 * time.Millisecond)
+	}
 	return nil
 }

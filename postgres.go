@@ -32,11 +32,11 @@ func Postgres() error {
 	if err != nil {
 		return fmt.Errorf("could not get port of postgres container: %w", err)
 	}
-	os.Setenv("PGHOST", "localhost")
-	os.Setenv("PGPORT", port)
-	os.Setenv("PGUSER", "postgres")
-	os.Setenv("PGDATABASE", "postgres")
-	os.Setenv("PGPASSWORD", "postgres")
+	_ = os.Setenv("PGHOST", "localhost")
+	_ = os.Setenv("PGPORT", port)
+	_ = os.Setenv("PGUSER", "postgres")
+	_ = os.Setenv("PGDATABASE", "postgres")
+	_ = os.Setenv("PGPASSWORD", "postgres")
 	for {
 		_, err := ctrctl.ContainerExec(nil, id,
 			"psql", "-U", "postgres", "-c", "SELECT VERSION();")
